@@ -11,26 +11,23 @@ the work of other students and/or persons.
 --------------------------------------------------------------------*/
 package com.Exercise19._01;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
-public class GenericStack<E> extends ArrayList<E> {
+public class TestGenericStack {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
 
-	public E peek() {
-		return get(size() - 1);
-	}
+		GenericStack<String> stk = new GenericStack<>(); 
 
-	public void push(E o) {
-		add(o);
-	}
+		System.out.print("Enter five strings: ");
+		for (int i = 0; i < 5; i++) 
+			stk.push(input.next());
 
-	public E pop() {
-		E o = get(size() - 1);
-		remove(size() - 1);
-		return o;
-	}
-
-	@Override
-	public String toString() {
-		return "stack: " + super.toString();
+		
+		while (!stk.isEmpty())
+			System.out.print(stk.pop() + " ");
+		System.out.println();
 	}
 }
