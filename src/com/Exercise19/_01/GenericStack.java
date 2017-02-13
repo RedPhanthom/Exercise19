@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class GenericStack<E> extends ArrayList<E> {
 
+	private static final long serialVersionUID = 1L;
+
 	public E peek() {
 		return get(size() - 1);
 	}

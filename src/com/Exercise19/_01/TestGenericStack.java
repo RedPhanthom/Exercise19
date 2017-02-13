@@ -21,13 +21,14 @@ public class TestGenericStack {
 
 		GenericStack<String> stk = new GenericStack<>(); 
 
-		System.out.print("Enter five strings: ");
+		System.out.println("Please Enter Five Strings: ");
 		for (int i = 0; i < 5; i++) 
 			stk.push(input.next());
 
-		
 		while (!stk.isEmpty())
-			System.out.print(stk.pop() + " ");
+			System.out.println("Stuff: " + stk.pop() + " ");
 		System.out.println();
+		
+		input.close();
 	}
 }
